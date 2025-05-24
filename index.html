@@ -272,15 +272,24 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
 
-        /* Print optimization */
+        /* Print optimization - KORRIGIERT */
         @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
             body {
-                background: white !important;
-                color: black !important;
+                background: #000000 !important;
+                color: white !important;
                 width: 297mm;
                 height: 210mm;
                 margin: 0;
                 padding: 12mm;
+            }
+            
+            .container {
+                background: #000000 !important;
             }
             
             .point-text {
